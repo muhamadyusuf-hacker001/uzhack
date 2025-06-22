@@ -2,132 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MuhammadYusuf | Cybersecurity Expert</title>
+  <title>JGARM Rezyume</title>
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: #0d0d0d;
-      color: #00ffcc;
-      font-family: 'Courier New', Courier, monospace;
+      background: radial-gradient(#2a0000, #000);
+      color: #ffcccc;
+      font-family: monospace;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
       min-height: 100vh;
     }
 
-    header {
-      padding: 50px 20px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 48px;
-      color: #00ff99;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #66ffe0;
-      margin-top: 10px;
-    }
-
-    main {
+    .wall {
+      width: 100%;
       flex: 1;
-      width: 90%;
-      max-width: 900px;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid #00ffcc;
-      border-radius: 10px;
-      backdrop-filter: blur(4px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    section {
-      margin-bottom: 30px;
+    .blood-drip, .falling-skull, .flying-skull {
+      position: absolute;
+      top: -100px;
+      z-index: 1;
     }
 
-    h2 {
-      color: #00ff99;
-      margin-bottom: 10px;
+    .blood-drip {
+      background: linear-gradient(to bottom, #4d0000, #8b0000, #cc0000);
+      border-radius: 50%;
+      box-shadow: 0 0 15px #8b0000;
+      animation: drip linear infinite;
     }
 
-    ul {
-      list-style: square;
-      padding-left: 20px;
+    .falling-skull img, .flying-skull img {
+      width: 40px;
+    }
+
+    @keyframes drip {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(120vh); opacity: 0; }
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(120vh); opacity: 0; }
+    }
+
+    @keyframes fly {
+      0% { transform: translate(0, 0); opacity: 1; }
+      100% { transform: translate(100vw, -100vh); opacity: 0; }
     }
 
     footer {
-      height: 180px;
-      width: 100%;
-      background: linear-gradient(to top, #001111, transparent);
+      height: 300px;
+      background: rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #66ffe0;
+      gap: 10px;
+      color: #ffcccc;
+      z-index: 10;
+      position: relative;
+      overflow: hidden;
     }
 
-    .social-icons a {
-      color: #00ffcc;
+    footer a {
+      color: #ff9999;
+      text-decoration: none;
+      font-size: 18px;
       margin: 0 10px;
-      font-size: 22px;
-      transition: transform 0.3s;
     }
 
-    .social-icons a:hover {
-      transform: scale(1.2);
-      color: #ffffff;
+    .social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>MuhammadYusuf</h1>
-    <p>Cybersecurity Specialist • Ethical Hacker • Network Defender</p>
-  </header>
+  <div class="wall" id="wall">
+    <img class="profile-img" src="https://via.placeholder.com/300x300.png?text=JGARM" alt="Profile Image">
+  </div>
 
-  <main>
-    <section>
-      <h2>🛡️ Mutaxassislik</h2>
-      <p>Senior darajadagi kiberxavfsizlik mutaxassisi, tizimlar himoyasi va ethical hacking yo‘nalishida 5+ yillik tajribaga ega.</p>
-    </section>
-
-    <section>
-      <h2>🧠 Ko‘nikmalar</h2>
-      <ul>
-        <li>Penetratsion test va ekspluatatsiya</li>
-        <li>Malware tahlili va teskari muhandislik</li>
-        <li>SIEM tizimlari (Splunk, ELK)</li>
-        <li>Wireshark, Metasploit, Nmap, Burp Suite</li>
-        <li>Linux xavfsizligi va tarmoq konfiguratsiyasi</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📁 Loyiha tajribasi</h2>
-      <ul>
-        <li>Bank tizimiga kiberxavfsizlik devorlarini joriy etish</li>
-        <li>Hujum simulyatsiyasi orqali kompaniya zaifliklarini aniqlash</li>
-        <li>Darkweb monitoring va credential leakage aniqlovchi bot yaratish</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📞 Kontaktlar</h2>
-      <p>Email: muhammadyusuf@cybermail.com</p>
-      <p>Telefon: +998 90 777 77 77</p>
-    </section>
-  </main>
-
-  <footer>
+  <footer id="footer">
+    <p>Email: <a href="mailto:muhammadyusufmirzarahmonov25@gmail.com">muhammadyusufmirzarahmonov25@gmail.com</a></p>
+    <p>Telefon 1: <a href="tel:+998903033132">+998 90 303 31 32</a></p>
+    <p>Telefon 2: <a href="tel:+998774203132">+998 77 420 31 32</a></p>
     <div class="social-icons">
-      <a href="#" title="Telegram"><i class='bx bxl-telegram'></i></a>
-      <a href="#" title="GitHub"><i class='bx bxl-github'></i></a>
-      <a href="#" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://t.me/coder_muhammad_08" title="Telegram"><i class='bx bxl-telegram'></i></a>
+      <a href="https://github.com/muhamadyusuf-hacker001" title="GitHub"><i class='bx bxl-github'></i></a>
     </div>
-    <p>&copy; 2025 MuhammadYusuf — CyberSec Pro</p>
   </footer>
+
+  <script>
+    const wall = document.getElementById('wall');
+    const footer = document.getElementById('footer');
+
+    function createBloodDrip() {
+      const drip = document.createElement('div');
+      drip.classList.add('blood-drip');
+      drip.style.left = Math.random() * 100 + 'vw';
+      const width = Math.random() * 5 + 2;
+      const height = Math.random() * 80 + 40;
+      drip.style.width = width + 'px';
+      drip.style.height = height + 'px';
+      const duration = Math.random() * 3 + 4;
+      drip.style.animationDuration = duration + 's';
+      drip.style.animationName = 'drip';
+      wall.appendChild(drip);
+      setTimeout(() => drip.remove(), duration * 1000);
+    }
+
+    function createFallingSkull() {
+      const skull = document.createElement('div');
+      skull.classList.add('falling-skull');
+      skull.style.left = Math.random() * 100 + 'vw';
+      const duration = Math.random() * 4 + 5;
+      skull.style.animation = `fall ${duration}s ease-in forwards`;
+      const img = document.createElement('img');
+      img.src = 'https://www.pngmart.com/files/23/Red-Skull-PNG-Transparent.png';
+      skull.appendChild(img);
+      wall.appendChild(skull);
+      setTimeout(() => skull.remove(), duration * 1000);
+    }
+
+    function createFlyingSkull() {
+      const skull = document.createElement('div');
+      skull.classList.add('flying-skull');
+      skull.style.left = Math.random() * 100 + 'vw';
+      skull.style.top = Math.random() * 500 + 'px';
+      const duration = Math.random() * 5 + 4;
+      skull.style.animation = `fly ${duration}s ease-in forwards`;
+      const img = document.createElement('img');
+      img.src = 'https://www.pngmart.com/files/23/Red-Skull-PNG-Transparent.png';
+      skull.appendChild(img);
+      footer.appendChild(skull);
+      setTimeout(() => skull.remove(), duration * 1000);
+    }
+
+    setInterval(createBloodDrip, 300);
+    setInterval(createFallingSkull, 800);
+    setInterval(createFlyingSkull, 600);
+  </script>
 </body>
 </html>
